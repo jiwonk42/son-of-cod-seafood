@@ -49,14 +49,29 @@ namespace SonOfCodSeafood.Controllers
 
         public IActionResult Edit(int id)
         {
-            var thisItem = _db.Posts.FirstOrDefault(posts => posts.Id == id);
-            return View(thisItem);
+            var thisPost = _db.Posts.FirstOrDefault(posts => posts.Id == id);
+            return View(thisPost);
         }
 
         [HttpPost]
         public IActionResult Edit(Post post)
         {
             _db.Entry(post).State = EntityState.Modified;
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Delete(int id)
+        {
+            var thisPost = _db.Posts.FirstOrDefault(posts => posts.Id == id);
+            return View(thisPost);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            var thisPost = _db.Posts.FirstOrDefault(posts => posts.Id == id);
+            _db.Posts.Remove(thisPost);
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
