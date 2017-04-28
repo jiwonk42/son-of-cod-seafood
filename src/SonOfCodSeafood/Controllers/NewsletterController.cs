@@ -13,7 +13,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace SonOfCodSeafood.Controllers
 {
-    [Authorize]
     public class NewsletterController : Controller
     {
         private readonly ApplicationDbContext _db;
@@ -28,6 +27,19 @@ namespace SonOfCodSeafood.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Newsletter newsletter)
+        {
+            _db.Newsletters.Add(newsletter);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }
