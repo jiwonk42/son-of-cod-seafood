@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace SonOfCodSeafood.Models
 {
-    public class ApplicationUser : IdentifyUser
+    public class ApplicationUser : IdentityUser
     {
     }
 }
