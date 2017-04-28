@@ -18,5 +18,7 @@ namespace SonOfCodSeafood.Models
             base.OnModelCreating(builder);
         }
         public DbSet<Post> Posts { get; set; }
+
+        public DbSet<Newsletter> Newsletters { get; set; }
     }
 }
