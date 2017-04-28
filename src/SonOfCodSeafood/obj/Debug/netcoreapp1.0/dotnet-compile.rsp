@@ -202,5 +202,8 @@
 --resource:"C:\Users\G1\desktop\SonOfCodSeafood\src\SonOfCodSeafood\obj\Debug\netcoreapp1.0\SonOfCodSeafooddotnet-compile.deps.json",SonOfCodSeafood.deps.json
 C:\Users\G1\desktop\SonOfCodSeafood\src\SonOfCodSeafood\Program.cs
 C:\Users\G1\desktop\SonOfCodSeafood\src\SonOfCodSeafood\Startup.cs
+C:\Users\G1\desktop\SonOfCodSeafood\src\SonOfCodSeafood\Migrations\20170428181804_Initial.cs
+C:\Users\G1\desktop\SonOfCodSeafood\src\SonOfCodSeafood\Migrations\20170428181804_Initial.Designer.cs
+C:\Users\G1\desktop\SonOfCodSeafood\src\SonOfCodSeafood\Migrations\ApplicationDbContextModelSnapshot.cs
 C:\Users\G1\desktop\SonOfCodSeafood\src\SonOfCodSeafood\Models\ApplicationDbContext.cs
 C:\Users\G1\desktop\SonOfCodSeafood\src\SonOfCodSeafood\Models\ApplicationUser.cs
