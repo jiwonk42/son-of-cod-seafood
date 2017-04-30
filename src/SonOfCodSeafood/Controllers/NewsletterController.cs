@@ -13,7 +13,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace SonOfCodSeafood.Controllers
 {
-    [Authorize]
     public class NewsletterController : Controller
     {
         private readonly ApplicationDbContext _db;
@@ -26,11 +25,9 @@ namespace SonOfCodSeafood.Controllers
         }
 
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            var currentUser = await _userManager.FindByIdAsync(userId);
-            return View(_db.Newsletters.Where(x => x.User.Id == currentUser.Id));
+            return View();
         }
 
         public IActionResult Create()

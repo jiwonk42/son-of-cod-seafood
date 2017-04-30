@@ -4,24 +4,18 @@
 }
 
 @model IEnumerable<SonOfCodSeafood.Models.Newsletter>
-
-<h2>Newsletter</h2>
-
-<p>@Html.ActionLink("Subscribe", "Create")</p>
-
-
-@if (Model.Any())
-{
-    <ul>
-        @foreach (var listNewsletter in Model)
-        {
-            <li>
-                @Html.DisplayFor(modelNewsletter => listNewsletter.Email)
-            </li>
-        }
-    </ul>
-}
-else
-{
-    <p>No tasks have been added yet!</p>
-}
+<div class="container newsletter">
+    <h2>Newsletter</h2>
+    <br />
+    <div class="news-image">
+        <img src="https://images.pexels.com/photos/161481/appetite-banana-calories-catering-161481.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" style="width:90%;height:90%" alt="salmon" />
+    </div>
+    
+    <div class="paragraphs">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rhoncus fringilla tortor id scelerisque. Proin porta nibh justo, vestibulum pellentesque tortor ultrices nec. Phasellus pharetra leo nisl, maximus malesuada dui consectetur vel. Suspendisse a lacinia odio, ut rhoncus augue. Fusce sit amet lectus at mi sagittis volutpat. Cras sed urna vel tortor fringilla placerat. Maecenas pulvinar, turpis in auctor egestas, quam diam consequat urna, at dictum neque ipsum ac tellus.</p>
+        <p>Vestibulum sagittis nec neque at fringilla. Etiam accumsan sed tellus a porta. Mauris nunc ipsum, tincidunt eu aliquet nec, congue non neque. In risus urna, fermentum et lacinia vitae, auctor molestie lectus. Mauris fermentum massa suscipit, tristique lectus vitae, pretium lacus. Praesent vitae nisl vitae libero commodo feugiat. Curabitur lobortis congue ante, sit amet fermentum enim vehicula sed. Proin suscipit dictum elit facilisis blandit. Duis nec sem nulla. Sed ipsum eros, laoreet et leo congue, porttitor luctus nisi. Nunc porttitor dui ac eros viverra mollis. Nulla sagittis augue vel fringilla consequat. Donec placerat quam ut sem rutrum tristique. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam id leo nec felis placerat venenatis.</p>
+        <p>Vivamus at metus accumsan, aliquam mauris elementum, blandit tortor. Aenean suscipit metus urna, quis rhoncus sem sagittis eget. Duis at ornare nunc. Pellentesque sed leo malesuada lorem iaculis interdum. Quisque id consectetur lectus. Suspendisse porttitor commodo erat non mattis. Pellentesque sed magna quis magna accumsan fermentum eu ac ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur molestie tempus arcu nec sollicitudin. Fusce dapibus orci vel ante finibus, nec euismod ligula vehicula. Etiam interdum vel erat sit amet malesuada. Curabitur id justo sed lorem cursus egestas a vitae nunc. Maecenas dignissim dolor vitae felis fermentum aliquet. Fusce aliquam, purus et euismod tristique, neque dui molestie ipsum, id maximus arcu quam et nisl. Mauris ut tincidunt leo.</p>
+        <h3>@Html.ActionLink("Click Here to Subscribe", "Create")</h3>
+    </div>
+    
+</div>
