@@ -4,21 +4,25 @@
 }
 @model SonOfCodSeafood.Models.Post
 
-<h2>Add a new task</h2>
-<hr />
-@using (Html.BeginForm())
-{
-    @Html.LabelFor(model => model.Title)
-    @Html.EditorFor(model => model.Title)
+<div class="container">
+    <h2>Add a New Post</h2>
+    <hr />
+    @using (Html.BeginForm())
+    {
+        @Html.LabelFor(model => model.Title)
+        @Html.EditorFor(model => model.Title)
 
-    @Html.LabelFor(model => model.Image)
-    @Html.EditorFor(model => model.Image)
+        @Html.LabelFor(model => model.Image)
+        @Html.EditorFor(model => model.Image)
 
-    @Html.LabelFor(model => model.Description)
-    @Html.EditorFor(model => model.Description)
+        @Html.LabelFor(model => model.Description)
+        @Html.EditorFor(model => model.Description)
 
-    @Html.LabelFor(model => model.Video)
-    @Html.EditorFor(model => model.Video)
-    <input type="submit" value="Create" />
-}
-@Html.ActionLink("Back to List", "Index")
+        @Html.LabelFor(model => model.Video)
+        @Html.EditorFor(model => model.Video)
+        <input type="submit" value="Add" class="btn btn-default"/>
+    }
+    <br />
+    <h4>@Html.ActionLink("Back to List", "Index")</h4>
+</div>
+
