@@ -25,6 +25,7 @@ namespace SonOfCodSeafood.Controllers
             _db = db;
         }
 
+
         public async Task<IActionResult> Index()
         {
             var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;

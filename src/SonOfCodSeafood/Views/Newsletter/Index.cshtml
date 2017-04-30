@@ -1,8 +1,27 @@
 ﻿@{
-    ViewData["Title"] = "Son of Cod Seafood";
+    ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+@model IEnumerable<SonOfCodSeafood.Models.Newsletter>
 
 <h2>Newsletter</h2>
 
 <p>@Html.ActionLink("Subscribe", "Create")</p>
+
+
+@if (Model.Any())
+{
+    <ul>
+        @foreach (var listNewsletter in Model)
+        {
+            <li>
+                @Html.DisplayFor(modelNewsletter => listNewsletter.Email)
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>No tasks have been added yet!</p>
+}

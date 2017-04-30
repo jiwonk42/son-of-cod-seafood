@@ -5,44 +5,26 @@
 
 @model IEnumerable<SonOfCodSeafood.Models.Post>
 
-@if (User.Identity.IsAuthenticated)
+<h2>Here is your list of tasks, @User.Identity.Name</h2>
+<hr />
+
+@if (Model.Any())
 {
-    <h2>Here is your list of tasks, @User.Identity.Name</h2>
-    <hr />
-
-    @if (Model.Any())
-    {
-        <ul>
-            @foreach (var listPost in Model)
-            {
-                <li>
-                    @Html.DisplayFor(modelPost => listPost.Title) | @Html.ActionLink("Edit", "Edit", new { id = listPost.Id })
-                    | @Html.ActionLink("Delete", "Delete", new { id = listPost.Id })
-                </li>
-            }
-        </ul>
-    }
-    else
-    {
-        <p>No tasks have been added yet!</p>
-    }
-
-    @Html.ActionLink("Create new", "Create")
-
+    <ul>
+        @foreach (var listPost in Model)
+        {
+            <li>
+                @Html.DisplayFor(modelPost => listPost.Title) | @Html.ActionLink("Edit", "Edit", new { id = listPost.Id })
+                | @Html.ActionLink("Delete", "Delete", new { id = listPost.Id })
+            </li>
+        }
+    </ul>
 }
 else
 {
-    @if (Model.Any())
-    {
-        <ul>
-            @foreach (var listPost in Model)
-            {
-                <li>
-                    @Html.DisplayFor(modelPost => listPost.Title)
-                </li>
-            }
-        </ul>
-    }
+    <p>No tasks have been added yet!</p>
 }
+
+@Html.ActionLink("Create new", "Create")
 
 
